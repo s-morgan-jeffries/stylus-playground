@@ -649,7 +649,7 @@ module.exports = function (grunt) {
       'sprite',
       'assemble',
       'concurrent:server',
-      'autoprefixer',
+//      'autoprefixer',
       'connect:develop',
       'watch'
     ]);
@@ -683,7 +683,7 @@ module.exports = function (grunt) {
       'copy:build1',
       'useminPrepare',
       'concurrent:build',
-      'autoprefixer',
+//      'autoprefixer',
       'concat',
       'copy:build2',
       'cdnify',
@@ -698,38 +698,8 @@ module.exports = function (grunt) {
       return grunt.task.run(buildTasks.concat(['serve:dist']));
     }
 
-//    grunt.task.run([
-//      'clean:server',
-//      'wiredep',
-//      'replace:develop',
-//      'sprite',
-//      'assemble',
-//      'concurrent:server',
-//      'autoprefixer',
-//      'connect:develop',
-//      'watch'
-//    ]);
     grunt.task.run(buildTasks);
   });
-
-//  grunt.registerTask('build', [
-//    'clean:build',
-//    'wiredep',
-//    'replace',
-//    'assemble',
-//    'copy:build1',
-//    'useminPrepare',
-//    'concurrent:build',
-//    'autoprefixer',
-//    'concat',
-//    'copy:build2',
-//    'cdnify',
-////    'cssmin',
-//    'uglify',
-//    'rev',
-//    'usemin'/*,
-//    'htmlmin'*/
-//  ]);
 
   grunt.registerTask('default', [
     'jshint',
