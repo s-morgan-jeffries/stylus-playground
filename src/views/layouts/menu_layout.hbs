@@ -1,0 +1,21 @@
+---
+layout: standard_layout.hbs
+menuItems:
+    typography: /typography/index.html
+    grids: /grid/index.html
+---
+<ul>
+    {{#each menuItems}}
+        {{#is ../submenu.name @key}}
+            <li>
+                <ul>{{#with ..}}<a href="{{this}}">{{capitalizeFirst @key}}</a>{{/with}}
+                    {{#each ../../submenu.items}}
+                        <li><a href="{{this}}">{{sentence (titleize @key)}}</a></li>
+                    {{/each}}
+                </ul>
+            </li>
+        {{else}}
+            <li><a href="{{this}}">{{capitalizeFirst @key}}</a></li>
+        {{/is}}
+    {{/each}}
+</ul>

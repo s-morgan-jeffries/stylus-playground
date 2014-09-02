@@ -117,7 +117,8 @@ module.exports = function (grunt) {
           src: [
             '.tmp',
             '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
+            '!<%= yeoman.dist %>/.git*',
+            '!<%= yeoman.dist %>/CNAME'
           ]
         }]
       },
@@ -168,6 +169,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
+          open: true,
           base: '<%= yeoman.dist %>'
         }
       }
@@ -207,7 +209,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: '.tmp',
             dest: '<%= yeoman.dist %>',
-            src: ['*.html']
+            src: ['**/*.html']
           },
           // You have to have this to copy fonts
           {
@@ -467,7 +469,6 @@ module.exports = function (grunt) {
     },
     
 
-    
     stylus: {
       options: {
         paths: [
@@ -591,16 +592,13 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
-      
-      
       stylus: {
-        files: ['<%= yeoman.src %>/styles/**/*.{styl}'],
+        files: ['<%= yeoman.src %>/styles/**/*.styl'],
         tasks: ['stylus:server', 'autoprefixer'],
         options: {
           livereload: true
         }
       },
-      
       scripts: {
         files: ['<%= yeoman.src %>/scripts/**/*.js'],
         tasks: ['jshint:scripts', 'karma:unitCI'],
@@ -641,7 +639,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['connect:dist:keepalive']);
     }
 
     grunt.task.run([
@@ -676,24 +674,62 @@ module.exports = function (grunt) {
 //    'karma'
 //  ]);
 
-  grunt.registerTask('build', [
-    'clean:build',
-    'wiredep',
-    'replace',
-    'assemble',
-    'copy:build1',
-    'useminPrepare',
-    'concurrent:build',
-    'autoprefixer',
-    'concat',
-    'copy:build2',
-    'cdnify',
-    'cssmin',
-    'uglify',
-    'rev',
-    'usemin',
-    'htmlmin'
-  ]);
+  grunt.registerTask('build', function (target) {
+    var buildTasks = [
+      'clean:build',
+      'wiredep',
+      'replace',
+      'assemble',
+      'copy:build1',
+      'useminPrepare',
+      'concurrent:build',
+      'autoprefixer',
+      'concat',
+      'copy:build2',
+      'cdnify',
+      'cssmin',
+      'uglify',
+      'rev',
+      'usemin'/*,
+       'htmlmin'*/
+    ];
+
+    if (target === 'serve') {
+      return grunt.task.run(buildTasks.concat(['serve:dist']));
+    }
+
+//    grunt.task.run([
+//      'clean:server',
+//      'wiredep',
+//      'replace:develop',
+//      'sprite',
+//      'assemble',
+//      'concurrent:server',
+//      'autoprefixer',
+//      'connect:develop',
+//      'watch'
+//    ]);
+    grunt.task.run(buildTasks);
+  });
+
+//  grunt.registerTask('build', [
+//    'clean:build',
+//    'wiredep',
+//    'replace',
+//    'assemble',
+//    'copy:build1',
+//    'useminPrepare',
+//    'concurrent:build',
+//    'autoprefixer',
+//    'concat',
+//    'copy:build2',
+//    'cdnify',
+////    'cssmin',
+//    'uglify',
+//    'rev',
+//    'usemin'/*,
+//    'htmlmin'*/
+//  ]);
 
   grunt.registerTask('default', [
     'jshint',
