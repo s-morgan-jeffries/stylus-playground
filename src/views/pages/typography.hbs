@@ -1,0 +1,102 @@
+---
+layout: standard_layout.hbs
+loremIpsum: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+---
+<h1>Paragraph:</h1>
+<p class="drop-cap">
+    This is a paragraph. It contains <strong>&lt;strong&gt;</strong>, <em>&lt;em&gt;</em>, <b>&lt;b&gt;</b>, and
+    <i>&lt;i&gt;</i> tags. {{truncate loremIpsum 400}}
+</p>
+<p>{{truncate loremIpsum 400}}</p>
+<p>{{truncate loremIpsum 400}}</p>
+
+<h1>Lists</h1>
+<ul>An unordered list
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+</ul>
+<ol>An ordered list
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+</ol>
+<dl>A definition list<br>
+    <dt><b>Term 1</b></dt><dd class="micro">definition 1</dd>
+    <dt><b>Term 2</b></dt><dd class="micro">definition 2</dd>
+</dl>
+<dl class="lining">An inline definition list<br>
+    <dt><b>Term 1</b></dt><dd class="micro">definition 1</dd>
+    <dt><b>Term 2</b></dt><dd class="micro">definition 2</dd>
+</dl>
+<dl class="dictionary-style">A dictionary-style definition list<br>
+    <dt><b>Term 1</b></dt>
+        <dd class="micro">definition 1</dd>
+        <dd class="micro">definition 2</dd>
+    <dt><b>Term 2</b></dt>
+        <dd class="micro">definition 1</dd>
+        <dd class="micro">definition 2</dd>
+</dl>
+
+<h1>Quotes</h1>
+<h3>Blockquote</h3>
+<blockquote>
+    <p>Best. Fucking. Quote. Ever.</p>
+    <cite>Some Millenial</cite>
+</blockquote>
+<h3>Pull quote</h3>
+<aside class="pull-quote">
+    <blockquote>
+        <p>Pull on my cock & balls.</p>
+        <cite>Bob Crane</cite>
+    </blockquote>
+</aside>
+<h3>Quote</h3>
+<p>
+    <q>Seriously,</q> he said, <q>pull on my cock & balls.</q>
+</p>
+
+<h1>Address</h1>
+<address>
+    LoS Studios<br>
+    10-93 Jackson Ave<br>
+    Long Island City, NY 11101
+</address>
+
+<h1>Links</h1>
+<a href="#">This is a link</a>
+
+<h1>Headings:</h1>
+<h1>H1: {{truncate loremIpsum 50}}</h1>
+<h2>H2: {{truncate loremIpsum 50}}</h2>
+<h3>H3: {{truncate loremIpsum 50}}</h3>
+<h4>H4: {{truncate loremIpsum 50}}</h4>
+<h5>H5: {{truncate loremIpsum 50}}</h5>
+<h6>H6: {{truncate loremIpsum 50}}</h6>
+
+<h1>Code</h1>
+<code>
+var fib = (function () {
+    var cache = [0,1];
+
+    return function fibFx(n) {
+       if (!(n in cache)) {
+            cache[n] = fib(n-2) + fib(n-1);
+        }
+        return cache[n];
+    };
+}());
+</code>
+<script>
+    var fib = (function () {
+        var cache = [0,1];
+
+        return function fibFx(n) {
+            if (!(n in cache)) {
+                cache[n] = fib(n-2) + fib(n-1);
+            }
+            return cache[n];
+        };
+    }());
+
+</script>
