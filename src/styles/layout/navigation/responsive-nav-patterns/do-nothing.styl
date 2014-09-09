@@ -1,0 +1,26 @@
+.responsive-nav-patterns
+  &.do-nothing
+    .nav
+      text-align center
+      ul
+        list-style none
+        padding 0px
+        margin 0px
+        font-weight bold
+        li
+          display inline-block
+          a
+            display: block
+            text-decoration: none
+            color: #444
+            transition: 0.4s ease background
+            padding: 15px 20px
+            border-radius: 2px
+            background-color: #f4f4f4
+            &:hover
+              background-color #ccc
+      @media all and (min-width:640px)
+        float right
+        padding 10px 0 0 0
+        ul li a
+          padding 5px 10px

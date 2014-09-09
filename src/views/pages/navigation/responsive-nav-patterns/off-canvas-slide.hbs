@@ -1,0 +1,160 @@
+---
+layout: navigation_layout.hbs
+classes:
+- responsive-nav-patterns
+- off-canvas-slide
+customScripts:
+- /scripts/offCanvasSlide.js
+---
+<div class="container">
+    <div class="menu_container cf">
+        <a id="menu-toggle" class="anchor-link" href="#mobile-nav">MENU</a>
+    </div>
+    <nav id="mobile-nav" class="nav cf" role="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Directions</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="main_content" role="main">
+
+        {{!--<div class="row">--}}
+
+            {{!--<div class="span-5">--}}
+
+                {{!--<h2>The Off Canvas Page Slide</h2>--}}
+
+                {{!--<div class="aligncenter">--}}
+                    {{!--<div id="carbonads-container">--}}
+                        {{!--<div class="carbonad">--}}
+                            {{!--<div id="azcarbon"><span><span class="carbonad-image"><a href="http://srv.carbonads.net/ads/click/x/GTND423EF6ADE23WCTS4YKQWCTAIE27UF6AITZ3JCEYDL53UF6YI5K7KC6BDT5QYFTSDTK3EHJNCLSIZ?segment=placement:responsivenavigationnet" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/15437" class="carbonad-image carbonad-img"></a></span><span class="carbonad-text"><a href="http://srv.carbonads.net/ads/click/x/GTND423EF6ADE23WCTS4YKQWCTAIE27UF6AITZ3JCEYDL53UF6YI5K7KC6BDT5QYFTSDTK3EHJNCLSIZ?segment=placement:responsivenavigationnet">Free web app performance monitoring and shirt when you try New Relic.</a></span><span class="carbonad-tag">ads via <a href="http://carbonads.com">Carbon</a></span></span></div>--}}
+                            {{!--<script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/48258/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>--}}
+                        {{!--</div>--}}
+                    {{!--</div>--}}
+                {{!--</div>--}}
+
+                {{!--<p>Over the past few years, this method has really become the standard method of responsive navigation. This menu pattern was originally derived from how Facebook has popularized the "off-canvas" look on their mobile website and app. When the browser gets down below a certain breakpoint, the menu disappears and we are presented with a single "menu" button. When this button is clicked, the menu slides out from the left and the main body content moves to the right. This gives the appearance of a menu that is sitting "off canvas" or out of the picture, then it slides in to reveal itself.</p>--}}
+
+                {{!--<p>I used to think that this menu couldn't accommodate a large menu with lots of sub-navigation. However, if you add a scrolling pane to it - then bam - you can add tons of links in there.</p>--}}
+
+                {{!--<h3>Javascript</h3>--}}
+
+                {{!--<p>Check out the JS that gives the body a class of "active" when the menu button is clicked:</p>--}}
+		{{!----}}
+{{!--<pre>$('.js #menu-toggle').click(function (e) {--}}
+  {{!--$('body').toggleClass('active');--}}
+  {{!--e.preventDefault();--}}
+{{!--});--}}
+{{!--</pre>--}}
+
+                {{!--<p>It's pretty straight forward - once the menu button is clicked, we toggle a class of "active" on the body tag. We also prevent the default action of the link going anywhere by adding <code>e.preventDefault();</code>.</p>--}}
+
+                {{!--<p>Please note: You should use <code>overflow:hidden;</code> on your container.</p>--}}
+
+                {{!--<h3>Styling The Menu</h3>--}}
+
+                {{!--<p>A fancy way to give the menu a background that extends the full width of the page (down to your footer) is to use the pseudo property <code>:before</code> on your main content container. Make sure to set the main content container to <code>position:relative</code>, then you can use the <code>:before</code> property to get fancy. Check out the source code of this page for an example.</p>--}}
+
+                {{!--<h3>Credit</h3>--}}
+
+                {{!--<p>Props to Jason Weaver for the code example that <a href="http://jasonweaver.name/lab/offcanvas/" rel="external" target="_blank">he has here.</a> He explains the use of the off canvas navigation as well as an off canvas sidebar.</p>--}}
+
+            {{!--</div><!-- END .span-5 -->--}}
+
+            {{!--<div class="span-7">--}}
+
+                {{!--<h2>The CSS:</h2>--}}
+
+{{!--<pre class=" language-css"><code class=" language-css">--}}
+    {{!--<span class="token selector">.container </span><span class="token punctuation">{</span> <span class="token property">max-width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span> 0px auto<span class="token punctuation">;</span> <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+{{!--<span class="token selector">.menu_container, --}}
+{{!--.anchor-link </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.menu_container </span><span class="token punctuation">{</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #000<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.anchor-link </span><span class="token punctuation">{</span> <span class="token property">padding</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #48c9b0<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span> <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.anchor-link:hover </span><span class="token punctuation">{</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+    {{!--<span class="token selector">.nav </span><span class="token punctuation">{</span> <span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span> <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #000<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul </span><span class="token punctuation">{</span> <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span> <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span> <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul li </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span> <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul li a </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span> 10px 12px<span class="token punctuation">;</span> <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> #444<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul li a:hover </span><span class="token punctuation">{</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+{{!--<span class="token selector">.main_content, --}}
+{{!--.nav </span><span class="token punctuation">{</span> <span class="token property">transition</span><span class="token punctuation">:</span> .2s margin ease<span class="token punctuation">;</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.main_content </span><span class="token punctuation">{</span> <span class="token property">padding</span><span class="token punctuation">:</span> 1.5em<span class="token punctuation">;</span> <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> <span class="token property">max-width</span><span class="token punctuation">:</span> 70em<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #f4f4f4<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">body.active .main_content:before </span><span class="token punctuation">{</span> <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span> <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">z-index</span><span class="token punctuation">:</span> -1<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span> -100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>	<span class="token property">background-color</span><span class="token punctuation">:</span> #4e4e4e<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+    {{!--<span class="token atrule">@media all and (max-width<span class="token punctuation">:</span>48.000em)</span><span class="token punctuation">{</span>--}}
+    {{!--<span class="token selector">.menu_container, .anchor-link </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+    {{!--<span class="token selector">.nav </span><span class="token punctuation">{</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">margin-left</span><span class="token punctuation">:</span> -100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span> <span class="token property">z-index</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.main_content </span><span class="token punctuation">{</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">margin-left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+    {{!--<span class="token selector">body.active .nav </span><span class="token punctuation">{</span> <span class="token property">margin-left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">body.active .main_content </span><span class="token punctuation">{</span> <span class="token property">margin-right</span><span class="token punctuation">:</span> -100%<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+
+    {{!--<span class="token selector">.nav </span><span class="token punctuation">{</span> <span class="token property">padding</span><span class="token punctuation">:</span> 0.6em 0<span class="token punctuation">;</span> <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul </span><span class="token punctuation">{</span> <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul li </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul li a </span><span class="token punctuation">{</span> <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #3E3E3E<span class="token punctuation">;</span> <span class="token property">border-top</span><span class="token punctuation">:</span> 1px solid #717171<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token selector">.nav ul li a:hover </span><span class="token punctuation">{</span> <span class="token property">background-color</span><span class="token punctuation">:</span>#5C5C5C<span class="token punctuation">;</span> <span class="token punctuation">}</span>--}}
+    {{!--<span class="token punctuation">}</span>--}}
+{{!--</code>--}}
+{{!--</pre>--}}
+
+
+                {{!--<style>--}}
+                    {{!--.container { max-width: 100%; margin: 0px auto; overflow: hidden; width: 100%; }--}}
+
+                    {{!--.menu_container,--}}
+                    {{!--.anchor-link { display: none; }--}}
+                    {{!--.menu_container { width: 100%; border-bottom: 1px solid #000; }--}}
+                    {{!--.anchor-link { padding: 1em; background-color: #48c9b0; color: #fff; float: right; }--}}
+                    {{!--.anchor-link:hover { background-color: #ccc; color: #fff; }--}}
+
+                    {{!--.nav { width:100%; border-bottom: 1px solid #000; }--}}
+                    {{!--.nav ul { list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }--}}
+                    {{!--.nav ul li { display: inline-block; text-align: left; }--}}
+                    {{!--.nav ul li a { display: block; padding: 10px 12px; text-decoration: none; color: #444; }--}}
+                    {{!--.nav ul li a:hover { background-color: #ccc; }--}}
+
+                    {{!--.main_content,--}}
+                    {{!--.nav { transition: .2s margin ease; display: block; position: relative; }--}}
+                    {{!--.main_content { padding: 1.5em; position: relative; max-width: 70em; width: 100%; background-color: #f4f4f4; margin: 0 auto; }--}}
+                    {{!--body.active .main_content:before { content: ""; position: absolute; z-index: -1; top: 0; left: -100%; width: 100%; height: 100%;	background-color: #4e4e4e; }--}}
+
+                    {{!--@media all and (max-width:48.000em){--}}
+                        {{!--.menu_container, .anchor-link { display: block; }--}}
+
+                        {{!--.nav { float: left; margin-left: -100%; width: 300px; z-index: 2; }--}}
+                        {{!--.main_content { float: left; margin-left: 0; width: 100%; }--}}
+
+                        {{!--body.active .nav { margin-left: 0; }--}}
+                        {{!--body.active .main_content { margin-right: -100%; }--}}
+
+                        {{!--.nav { padding: 0.6em 0; border: none; padding: 0; }--}}
+                        {{!--.nav ul { text-align: left; font-weight: normal; }--}}
+                        {{!--.nav ul li { display: block; }--}}
+                        {{!--.nav ul li a { border-bottom: 1px solid #3E3E3E; border-top: 1px solid #717171; color: #ffffff; padding: 12px; }--}}
+                        {{!--.nav ul li a:hover { background-color:#5C5C5C; }--}}
+                    {{!--}--}}
+                {{!--</style>--}}
+
+            {{!--</div>--}}
+
+        {{!--</div><!-- END .row -->--}}
+
+    </section>
+    {{!--<div class="row margin-top">--}}
+        {{!--<p style="text-align:center;">--}}
+            {{!--<a class="green button" href="../../index.html">← back to all examples</a>--}}
+        {{!--</p>--}}
+    {{!--</div>--}}
+</div>

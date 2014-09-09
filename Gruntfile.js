@@ -73,14 +73,14 @@ module.exports = function (grunt) {
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
-        browsers: ['last 1 version']
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
       },
-      build: {
+      all: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
+          cwd: '<%= yeoman.src %>/styles/',
           src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          dest: '<%= yeoman.src %>/styles/'
         }]
       }
     },
@@ -357,7 +357,7 @@ module.exports = function (grunt) {
           patterns: [
             {
               match: '../../bower_components',
-              replacement: 'bower_components'
+              replacement: '/bower_components'
             }
           ],
           usePrefix: false
@@ -595,13 +595,15 @@ module.exports = function (grunt) {
       stylus: {
         files: ['<%= yeoman.src %>/styles/**/*.styl'],
         tasks: ['stylus:server', 'autoprefixer'],
+//        tasks: ['stylus:server'],
         options: {
           livereload: true
         }
       },
       scripts: {
         files: ['<%= yeoman.src %>/scripts/**/*.js'],
-        tasks: ['jshint:scripts', 'karma:unitCI'],
+//        tasks: ['jshint:scripts', 'karma:unitCI'],
+        tasks: ['jshint:scripts'],
         options: {
           livereload: true
         }
@@ -649,22 +651,11 @@ module.exports = function (grunt) {
       'sprite',
       'assemble',
       'concurrent:server',
-//      'autoprefixer',
+      'autoprefixer',
       'connect:develop',
       'watch'
     ]);
   });
-
-//  grunt.registerTask('develop', [
-//    'clean:server',
-//    'wiredep',
-//    'replace:develop',
-//    'assemble',
-//    'concurrent:server',
-//    'autoprefixer',
-//    'connect:develop',
-//    'watch'
-//  ]);
 
 //  grunt.registerTask('test', [
 //    'clean:server',
@@ -683,15 +674,15 @@ module.exports = function (grunt) {
       'copy:build1',
       'useminPrepare',
       'concurrent:build',
-//      'autoprefixer',
+      'autoprefixer',
       'concat',
       'copy:build2',
       'cdnify',
       'cssmin',
       'uglify',
       'rev',
-      'usemin'/*,
-       'htmlmin'*/
+      'usemin',
+      'htmlmin'
     ];
 
     if (target === 'serve') {

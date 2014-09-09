@@ -1,1 +1,35 @@
-tables()
+$bd-width = 1px
+$bd-style = solid
+$bd-color = lightgray
+$stripe-color = red
+$hover-color = blue
+$row-border = 5px solid blue
+$column-border = 3px double green
+
+.table-container
+  width 100%
+  max-width 1000px
+  padding-top 50px
+
+.table
+  tableize()
+  /*extend-table-row-borders($bd-width: $bd-width, $bd-style: $bd-style, $bd-color: $bd-color)*/
+  /*extend-table-cell-borders($bd-width: $bd-width, $bd-style: $bd-style, $bd-color: $bd-color)*/
+  extend-table-justify-headers(left)
+  /*extend-table-cell-borders(2px, dotted, red)*/
+  extend-table-row-borders(1px, dotted, blue)
+  extend-table-header-row-borders(2px, solid, blue)
+  /*extend-table-column-borders(3px, dashed, green)*/
+  /*extend-table-reset-borders()*/
+  /*extend-table-row-borders(5px, solid, green)*/
+  /*extend-table-column-borders(3px dashed blue)*/
+  /*+when-interacting()*/
+    /*extend-table-reset-borders()*/
+
+
+
+/*.table--bordered*/
+  /*extend-table-cells(1px, solid, black)*/
+
+.table--striped
+  extend-table-striped(beige)

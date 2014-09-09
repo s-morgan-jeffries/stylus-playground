@@ -1,0 +1,186 @@
+---
+layout: navigation_layout.hbs
+classes:
+- responsive-nav-patterns
+- always-off-canvas
+---
+<div class="page">
+
+    <nav class="offcanvas" role="navigation">
+
+        <ul>
+
+            <li><a href="../../index.html"><i class="icon-home"></i> Home</a></li>
+
+            <li>
+                <a class="moveleft" href="#">Examples:</a>
+                <ul>
+                    <li><a href="../simple-padding/index.html"><i class="icon-code"></i> Do Nothing Approach</a></li>
+                    <li><a href="../footer-list/index.html"><i class="icon-code"></i> Footer Navigation</a></li>
+                    <li><a href="../select-menu/index.html"><i class="icon-code"></i> Select Menu</a></li>
+                    <li><a href="../simple-toggle/index.html"><i class="icon-code"></i> Menu Overlay</a></li>
+                    <li><a href="../multi-toggle/index.html"><i class="icon-code"></i> Multi Toggle</a></li>
+                    <li class="current-parent"><a class="current-parent" href="index.html"><i class="icon-code"></i> Off Canvas</a></li>
+                    <li class="current"><a class="current" href="always-off-canvas.html"><i class="icon-code"></i> Always Off Canvas</a></li>
+                    <li><a href="../clean-grid/index.html"><i class="icon-code"></i> Grid Based</a></li>
+                    <li><a href="../the-flip/index.html"><i class="icon-code"></i> Backside Menu Flip</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="content-frame">
+
+        <header class="header">
+
+            <a class="menu-toggle toggle-me" href="#"><span class="icon-reorder"></span></a>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="span-12">
+
+                        <h1 class="heavy"><span>Adventures in </span>Responsive Navigation</h1>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <header class="example-header" role="banner">
+
+            <div class="nav-wrapper">
+
+                <div class="container cf">
+
+                    <h3 class="e-logo"><span class="goingleft">← </span>Swipe Me <span class="goingright">→</span></h3>
+
+                </div><!--END .container -->
+
+            </div><!-- END .nav-wrapper -->
+
+        </header><!-- END .header -->
+
+        <div class="container margin-top">
+
+            <div class="row">
+
+                <div class="span-5">
+
+                    <h2>Always Off Canvas + Touch Enabled!</h2>
+
+                    <div class="aligncenter">
+                        <div id="carbonads-container">
+                            <div class="carbonad">
+                                <div id="azcarbon"><span><span class="carbonad-image"><a href="http://srv.carbonads.net/ads/click/x/GTND423EF6AI4KJWCV74YKQWCTAILKQ7CKYDPZ3JCEYDL5QJCABIKKQKC6BDT5Q7C6YI6K3EHJNCLSIZ?segment=placement:responsivenavigationnet" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/16674" class="carbonad-image carbonad-img"></a></span><span class="carbonad-text"><a href="http://srv.carbonads.net/ads/click/x/GTND423EF6AI4KJWCV74YKQWCTAILKQ7CKYDPZ3JCEYDL5QJCABIKKQKC6BDT5Q7C6YI6K3EHJNCLSIZ?segment=placement:responsivenavigationnet">Previously Only in San Francisco, attend the "Harvard" of coding schools wherever you are.</a></span><span class="carbonad-tag">ads via <a href="http://carbonads.com">Carbon</a></span></span></div>
+                                <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/48258/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>This entire site actually uses the "always off canvas" method. However on this page, you can doing several things to activate the menu. You can either:</p>
+
+                    <ul>
+                        <li>hover over the left side of the page (on a desktop with a mouse / not a touch device)</li>
+                        <li>on most touch devices you can 'click' inside the menu (instead of hovering)</li>
+                        <li>you can swipe the gray header area to the right to open it - or to the left to close it</li>
+                        <li>when at a smaller screen size, you can click on the hamburger icon to open the menu</li>
+                    </ul>
+
+                    <p>This is a great method to design around and has recently been gaining lots of popularity. The menu always sits off canvas - no matter what your screen size. This lets you push the limits with your design. The only caveat is that a lot of users might not know how to navigate the site if they aren't familiar with what to do! So make sure that whatever icon or wording you use - it's easy to understand.</p>
+
+                    <p>The other negative feedback I have heard about this is that some users think that constantly having to open and close the menu could be a pain in the rear. Hmm.</p>
+
+                </div><!-- END. span-5 -->
+
+                <div class="span-7">
+
+                    <h2>The CSS:</h2>
+
+<pre class=" language-css"><code class=" language-css">
+    <span class="token selector">.example-header  </span><span class="token punctuation">{</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> #f4f4f4<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span> <span class="token property">z-index</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">.e-logo </span><span class="token punctuation">{</span> <span class="token property">line-height</span><span class="token punctuation">:</span>100px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+    <span class="token selector">.goingright </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">.nav-collapsed .goingleft </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token selector">.nav-collapsed .goingright </span><span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code>
+</pre>
+
+                    <style>
+                        .example-header  { width: 100%; position: relative; background-color: #f4f4f4; height: 100px; z-index: inherit; }
+                        .e-logo { line-height:100px; }
+
+                        .goingright { display: none; }
+                        .nav-collapsed .goingleft { display: none; }
+                        .nav-collapsed .goingright { display: inline; }
+                    </style>
+
+                </div>
+
+            </div><!-- END .row -->
+
+            <div class="row margin-top">
+                <p style="text-align:center;">
+                    <a class="green button" href="../../index.html">← back to all examples</a>
+                </p>
+            </div>
+
+        </div><!-- END .container -->
+
+
+        <script src="../../assets/js/jquery.hammer.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                function openMenu() {
+                    $("body").removeClass('nav-collapsed');
+                }
+
+                function closeMenu() {
+                    $("body").addClass('nav-collapsed');
+                }
+
+                $('.example-header').hammer().on('dragright', function(e) {
+                    openMenu();
+                });
+
+                $('.example-header').hammer().on('dragleft', function(e) {
+                    closeMenu();
+                });
+
+            });
+        </script>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="span-6">
+
+                        <p class="copyright">Copyright © 2014 | <a href="http://erickar.be">Erick Arbe</a> | Site Design Credit: <a href="http://cmagruder.me/">Christopher Magruder</a></p>
+
+                    </div>
+
+                    <div class="span-6 socials">
+
+                        <p>
+                            <a href="https://plus.google.com/106346024917683751854?rel=author" title="Find me on Google Plus"><i class="icon-google-plus"></i></a>
+                            <a href="http://twitter.com/erickarbe" title="Find me on Twitter"><i class="icon-twitter2"></i></a>
+                        </p>
+
+                    </div>
+
+                </div><!-- END .row -->
+            </div><!-- END .container -->
+        </footer>
+
+    </div><!-- END .content-frame -->
+</div>

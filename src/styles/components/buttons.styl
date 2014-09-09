@@ -1,1 +1,54 @@
-buttons()
+$col=darkgray
+$bg-col=beige
+$hov-col=null
+$hov-bg-col=null
+$pad=10px
+$bd-width=1px
+$bd-style=solid
+$bd-col=black
+$bd-rad=1px
+$add-full=true
+$add-pill=true
+$add-inactive=true
+$border-box=true
+
+$btn-sizes = {
+  small: 5px,
+  large: 20px
+}
+
+$btn-colors = {
+  primary: {
+    color: blue,
+    background-color: yellow
+    border-color: orange
+    hover-color: green
+    hover-background-color: white
+  }
+}
+
+.btn
+  color $col
+  background $bg-col
+  buttonize($padding: $pad, $border-width: $bd-width, $border-style: $bd-style, $border-color: $bd-col, $button-sizes: $btn-sizes)
+
+.btn--full
+  extend-button-full($use-border-box: $border-box)
+
+.btn--inactive
+  extend-button-inactive()
+
+.btn--box-cutter
+  extend-button-box-cutter()
+
+.btn--rounded
+  extend-button-rounded()
+
+.btn--tabbed
+  extend-button-tabbed()
+
+.btn--small
+  extend-button-size($btn-sizes.small, $bd-width)
+
+.btn--large
+  extend-button-size($btn-sizes.large, $bd-width)

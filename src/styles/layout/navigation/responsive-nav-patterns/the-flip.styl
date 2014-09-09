@@ -1,0 +1,110 @@
+.responsive-nav-patterns
+  &.the-flip
+    .span-5
+    .span-7
+      position: inherit
+    header.cf
+      margin-bottom: 2em
+      & > h1
+        text-align: center
+      nav
+        width:100%;
+        border-bottom: 1px solid #ccc;
+        padding: .6em 0;
+      ul
+        list-style: none
+        padding: 0px
+        margin: 0px
+        font-weight: bold
+        text-align: center;
+        li
+          display: inline-block;
+          text-align: left;
+          a
+            display: block
+            padding: 5px 10px
+            text-decoration: none
+            color: #444;
+            &:hover
+              background-color: #ccc;
+    article
+      padding: 5em
+    .anchor-link
+      display: none;
+      font-weight: bold;
+      padding: 0 1em;
+      text-align: right;
+      text-decoration: none;
+      color: #8A2404
+      float: right;
+    #mobile-nav
+      display:none;
+      ul
+        list-style: none
+        margin: 0px
+        padding: 0px;
+        li
+          list-style: none
+          text-align: center;
+          a
+            display: block
+            padding: 20px 10px
+            border-bottom: 1px solid #ccc
+            text-decoration: none;
+            &:hover
+              background-color: #ccc;
+              color: #fff;
+    p.copyright
+      text-align: center
+    +below(48em)
+      article
+        padding: 1.5em;
+      header.cf nav
+        padding: 0.6em 0;
+        & > ul
+          display: none;
+      .anchor-link
+      #mobile-nav
+        display: block;
+      .back header.cf
+        padding: .8em 0;
+        background-color: #444;
+        .anchor-link
+          color: #fff;
+      #page_container
+        position: relative;
+        margin: 0px auto;
+        width: 100%;
+        z-index: 1;
+        perspective: 1000px;
+        &.active #main_content
+          transform: rotateY(180deg);
+      #main_content
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1.0s linear;
+        box-shadow: -5px 5px 5px #aaa;
+      .face
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        &.back
+          display: block;
+          transform: rotateY(180deg)
+          box-sizing border-box
+          color: white;
+          text-align: center;
+      .no-js & #mobile-nav
+      .no-csstransforms3d & #mobile-nav
+        display: block;
+        border-top: 1px solid #ccc;
+      .no-js & .face
+      .no-csstransforms3d & .face
+        position: relative
+      .no-js & .face.back
+        transform: inherit
+      .no-js & .back header
+      .no-csstransforms & .back header
+        display none

@@ -1,0 +1,14 @@
+scope-test = @() {
+  module = {}
+
+  module['fn1'] = @(self) {
+    p('I am fn1!')
+  }
+
+  /*module['fn2'] = @(self) {*/
+    /*self['fn1'](self)*/
+  /*}*/
+
+  return module
+}
+scope-test = scope-test()

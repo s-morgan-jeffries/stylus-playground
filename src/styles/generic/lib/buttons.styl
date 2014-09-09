@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/* Subtract the border size from the padding value so that buttons do not grow larger as we add borders. */
+-calc-button-padding($pad, $bd-width=0)
+  $adjusted-top-padding = -top-value($pad) - -top-value($bd-width)
+  $adjusted-right-padding = -double(-right-value($pad)) - -right-value($bd-width)
+  $adjusted-bottom-padding = -bottom-value($pad) - -bottom-value($bd-width)
+  $adjusted-left-padding = -double(-left-value($pad)) - -left-value($bd-width)
+  $adjusted-padding = $adjusted-top-padding $adjusted-right-padding $adjusted-bottom-padding $adjusted-left-padding
+  -shorten-positional-values($adjusted-padding)
+
+buttonize($padding=10px, $border-width=1px, $border-style=solid, $border-color=black)
+  /* Allows us to style box model properties */
+  display inline-block
+  /* Line different sized buttons up a little nicer */
+  vertical-align middle
+  /* Make buttons inherit font styles (often necessary when styling `input`s as buttons) */
+  font inherit
+  /* Reset/normalize some styles */
+  text-align center
+  border none
+  margin 0
+  /* Force all button-styled elements to appear clickable */
+  cursor pointer
+  /* Fixes odd inner spacing in IE7 */
+  overflow visible
+  padding -calc-button-padding($padding, $border-width)
+  text-decoration none
+  if $border-width != 0
+    border-width $border-width
+    border-style $border-style
+    border-color $border-color
+  +when-interacting()
+    text-decoration none
+  &::-moz-focus-inner
+    /* Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding. */
+    border 0
+    padding 0
+
+extend-button-full($use-border-box=false)
+  width 100%
+  unless $use-border-box
+    /* Remove paddings so that widths and paddings don’t conflict. */
+    padding-right 0
+    padding-left 0
+
+/* Round-ended buttons */
+extend-button-pill()
+  /* Overly-large value to ensure the radius rounds the whole end of the button. */
+  border-radius 100%
+
+extend-button-inactive()
+  cursor text
+
+extend-button-box-cutter($border-radius=35px)
+  regular = 0
+  rounded = $border-radius
+  border-top-left-radius rounded
+  border-top-right-radius regular
+  border-bottom-left-radius regular
+  border-bottom-right-radius rounded
+
+extend-button-rounded($border-radius=10px)
+  rounded = $border-radius
+  border-top-left-radius rounded
+  border-top-right-radius rounded
+  border-bottom-left-radius rounded
+  border-bottom-right-radius rounded
+
+extend-button-tabbed($border-radius=10px)
+  regular = 0
+  rounded = $border-radius
+  border-top-left-radius rounded
+  border-top-right-radius rounded
+  border-bottom-left-radius regular
+  border-bottom-right-radius regular
+
+extend-button-size($pad, $bd-width)
+  padding -calc-button-padding($pad, $bd-width)

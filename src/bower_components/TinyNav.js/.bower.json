@@ -1,0 +1,14 @@
+{
+  "name": "TinyNav.js",
+  "homepage": "https://github.com/viljamis/TinyNav.js",
+  "_release": "d8355283e9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d8355283e95421bec9cc9c17a4a461667afa3048"
+  },
+  "_source": "https://github.com/viljamis/TinyNav.js.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/viljamis/TinyNav.js.git",
+  "_direct": true
+}

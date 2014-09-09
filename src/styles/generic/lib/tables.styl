@@ -1,0 +1,118 @@
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+
+tableize()
+  width 100%
+  max-width 100%
+
+extend-table-fixed()
+  table-layout fixed
+
+/* Padding */
+extend-table-padding($pad)
+  th
+  td
+    padding $pad
+
+/* Alignment */
+extend-table-justify($el, $alignment)
+  $alignments = left right center
+  $els = th td
+  if ($alignment in $alignments) and ($el in $els)
+    {$el}
+      text-align $alignment
+
+extend-table-justify-headers($alignment)
+  extend-table-justify(th, $alignment)
+
+extend-table-justify-data($alignment)
+  extend-table-justify(td, $alignment)
+
+/* Borders */
+/* Column borders */
+/* Due to the use of the :not selector, this is only supported in IE9 and above */
+extend-table-column-borders($border-width=1px, $border-style=solid, $border-color=black)
+  if $border-width == none
+    $column-border = none
+  else if length($border-width) == 3
+    $column-border = $border-width
+  else
+    $column-border = $border-width $border-style $border-color
+  th
+  td
+    &:not(:last-child)
+      border-right $column-border
+
+extend-table-cell-borders($border-width=1px, $border-style=solid, $border-color=black)
+  &
+  th
+  td
+    border $border-width $border-style $border-color
+
+/* Row borders */
+/* Due to the use of the :not selector, this is only supported in IE9 and above */
+extend-table-section-row-borders($section, $row-border)
+  p($section)
+  p(typeof($section))
+  p(unquote($section))
+  {$section}
+    &:not(:last-child)
+      th
+      td
+        border-bottom $row-border
+  {$section}
+    &:last-child
+      tr:not(:last-child)
+        th
+        td
+          border-bottom $row-border
+
+extend-table-row-borders($border-width=1px, $border-style=solid, $border-color=black)
+  if $border-width == none
+    $row-border = none
+  else if length($border-width) == 3
+    $row-border = $border-width
+  else
+    $row-border = $border-width $border-style $border-color
+  $section = 'thead, tbody, tfoot'
+  extend-table-section-row-borders($section, $row-border)
+
+extend-table-header-row-borders($border-width=1px, $border-style=solid, $border-color=black)
+  if $border-width == none
+    $row-border = none
+  else if length($border-width) == 3
+    $row-border = $border-width
+  else
+    $row-border = $border-width $border-style $border-color
+  $section = thead
+  extend-table-section-row-borders($section, $row-border)
+
+/* This should only be used as a last resort, since it will pollute CSS with lots of extra rules. */
+extend-table-reset-borders()
+  &
+  th
+  td
+    border none
+  extend-table-row-borders(none)
+  extend-table-column-borders(none)
+
+/* Add transparent background? */
+extend-table-transparent()
+  background transparent
+
+
+/* Background */
+extend-table-striped($stripe-color)
+  tbody
+    tr:nth-of-type(odd)
+      background-color $stripe-color
+
+/* Should be applied *after* extend-table-striped, since the specificity will be about the same*/
+extend-table-hover($hover-color)
+  tbody
+    tr
+      +when-interacting()
+        background-color $hover-color
+
+/* To emulate Bootstrap's responsive tables, you'll need to wrap tables in a div */
