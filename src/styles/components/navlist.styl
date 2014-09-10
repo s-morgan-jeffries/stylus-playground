@@ -1,0 +1,40 @@
+$navlist-block-padding = 10px
+
+.navlist
+  navlistize()
+
+.navlist--stacked
+  extend-navlist-stacked()
+
+.navlist--banner
+  extend-navlist-banner()
+
+.navlist--block
+  extend-navlist-block($navlist-block-padding)
+
+.navlist--fit
+  extend-navlist-fit()
+
+.navlist--keywords
+  extend-navlist-keywords()
+
+.breadcrumb
+  extend-navlist-breadcrumb()
+
+.breadcrumb--path
+  extend-navlist-breadcrumb-path()
+
+.navlist--no-whitespace
+  letter-spacing -0.31em
+  word-spacing -0.43em
+  white-space nowrap
+  /*> li*/
+    /*letter-spacing normal*/
+    /*word-spacing normal*/
+
+.navlist-demo
+  .island
+    border 1px solid #000000
+    background-color #008000
+    .navlist
+      background-color #ff0000

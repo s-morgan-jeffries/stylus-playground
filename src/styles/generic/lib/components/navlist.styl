@@ -1,0 +1,179 @@
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ *
+ */
+
+navlistize()
+  list-style none
+  margin-left 0
+  padding-left 0
+  clearfix()
+  > li
+    &
+    > a
+      display inline-block
+      *display inline
+      zoom 1
+
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+extend-navlist-stacked()
+  > li
+    display list-item
+    > a
+      display block
+
+
+/**
+ * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ *
+   <ul class="nav  nav--banner">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+extend-navlist-banner()
+  text-align center
+
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
+ *
+   <ul class="nav  nav--block">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+extend-navlist-block($padding)
+  line-height 1
+  /* Remove whitespace caused by `inline-block` */
+  letter-spacing -0.31em
+  word-spacing -0.43em
+  white-space nowrap
+  > li
+    letter-spacing normal
+    word-spacing normal
+    > a
+      padding $padding
+
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ *
+   <ul class="nav  nav--fit">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Thanks to @pimpl for this idea!
+ */
+extend-navlist-fit()
+  display table
+  width 100%
+  > li
+    display table-cell
+    > a
+      display block
+
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ *
+   `<ul class="nav  nav--keywords>`
+ *
+ */
+extend-navlist-keywords()
+  > li
+    &:after
+      content "\002C" "\00A0"
+    &:last-child:after
+      display none
+
+/*------------------------------------*\
+    $BREADCRUMB
+\*------------------------------------*/
+/**
+ * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
+ *
+   <ol class="nav  breadcrumb">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>The Board</a></li>
+       <li class=current><a href=#>Directors</a></li>
+   </ol>
+ *
+ * Demo: jsfiddle.net/inuitcss/rkAY9
+ *
+ */
+
+
+/**
+ * Assign a delimiter on the fly through a data attribute, e.g.:
+ *
+   <ol class="nav  breadcrumb">
+       <li><a href=#>Home</a></li>
+       <li data-breadcrumb="|"><a href=#>About</a></li>
+       <li data-breadcrumb="|"><a href=#>The Board</a></li>
+       <li data-breadcrumb="|" class=current><a href=#>Directors</a></li>
+   </ol>
+ *
+ */
+
+extend-navlist-breadcrumb()
+  $s = selector()
+  > li + li:before
+    content "\00BB" "\00A0"
+  > li + li[data-breadcrumb]:before
+    /* Assign a delimiter on the fly through a data attribute */
+    content attr(data-breadcrumb) "\00A0"
+  /{$s}__root
+    /* Denote the root of the tree */
+    font-weight bold
+
+/**
+ * For denoting a path-like structure, GitHub style, e.g.:
+ *
+   <ol class="nav  breadcrumb--path">
+       <li class=breadcrumb__root><a href=#>inuit.css</a></li>
+       <li><a href=#>inuit.css</a></li>
+       <li><a href=#>partials</a></li>
+       <li class=current><a href=#>objects</a></li>
+   </ol>
+ *
+ */
+extend-navlist-breadcrumb-path()
+  > li + li:before
+    content "\002F" "\00A0"

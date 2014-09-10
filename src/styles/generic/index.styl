@@ -1,6 +1,7 @@
 $use-jeet ?= true
 $use-typeplate ?= true
 $use-spritesmith ?= true
+$use-vanilla-normalize ?= false
 
 @import 'axis-css-adapter/axis'
 @import 'rupture-adapter/rupture'
@@ -10,8 +11,14 @@ if $use-typeplate
   @import 'typeplate-stylus/typeplate'
 if $use-spritesmith
   @import 'spritesmith-stylus/spritesmith'
+if $use-vanilla-normalize
+  @import 'stylus-normalize/normalize'
+/* Project-specific Stylus library */
 @import 'lib'
 
-establish-baseline('normalize')
+if $use-vanilla-normalize
+  normalize()
+else
+  establish-baseline('normalize')
 unless $use-jeet
   grid()

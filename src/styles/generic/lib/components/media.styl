@@ -1,0 +1,18 @@
+mediaize($spacing)
+  display block
+  clearfix()
+  $s = selector()
+  /{$s}__img
+    float left
+    margin-right $spacing
+  /{$s}__img--rev
+    float right
+    margin-left $spacing
+  /{$s}__img
+  /{$s}__img--rev
+    display block
+  /{$s}__body
+    overflow hidden
+    &
+    & > :last-child
+      margin-bottom 0

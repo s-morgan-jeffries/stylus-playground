@@ -77,8 +77,15 @@
 -halve(n)
   return -round(n / 2)
 
+/* Mixins */
 when-interacting()
   &:hover
   &:active
   &:focus
     {block}
+
+clearfix()
+  &:after
+    content ""
+    display table
+    clear both
