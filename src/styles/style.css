@@ -1,4 +1,4 @@
-/* line 28 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
+/* line 31 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
 /* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
 
@@ -138,11 +138,11 @@
 
 /* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/unicode-chars.styl */
 
-/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/unicode-chars.styl */
+/* line 4 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/unicode-chars.styl */
 
-/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/font-stacks.styl */
+/* line 4 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/font-stacks.styl */
 
-/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/font-stacks.styl */
+/* line 4 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/defines/font-stacks.styl */
 
 /* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/utils/index.styl */
 
@@ -152,27 +152,31 @@
 
 /* line 92 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/utils/utils.styl */
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/index.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/index.styl */
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/index.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/index.styl */
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 117 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 114 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 117 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/button.styl */
+/* line 114 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/button.styl */
 
-/* line 81 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/button.styl */
+/* line 81 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/button.styl */
 
-/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/island.styl */
+/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/island.styl */
 
-/* line 7 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/island.styl */
+/* line 7 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/island.styl */
 
-/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
-/* line 19 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 19 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
-/* line 19 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 19 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
+
+/* line 178 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
+
+/* line 178 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/flyout.styl */
 
 /* line 191 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/index.styl */
 
@@ -584,7 +588,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 178 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 119 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/flyout.styl */
 
 /* line 3 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/base/index.styl */
 
@@ -1253,17 +1257,17 @@ textarea.error:focus {
   /*extend-table-reset-borders()*/
 }
 
-/* line 22 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 22 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
 .table th {
   text-align: left;
 }
 
-/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 59 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 56 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 60 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 57 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
 .table thead:not(:last-child) th,
 .table tbody:not(:last-child) th,
@@ -1274,13 +1278,13 @@ textarea.error:focus {
   border-bottom: 1px dotted #00f;
 }
 
-/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 64 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 61 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 65 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 62 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 66 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 63 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
 .table thead:last-child tr:not(:last-child) th,
 .table tbody:last-child tr:not(:last-child) th,
@@ -1291,24 +1295,24 @@ textarea.error:focus {
   border-bottom: 1px dotted #00f;
 }
 
-/* line 58 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 55 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 59 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 56 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 60 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 57 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
 .table thead:not(:last-child) th,
 .table thead:not(:last-child) td {
   border-bottom: 2px solid #00f;
 }
 
-/* line 63 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 60 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 64 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 61 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 65 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 62 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 66 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 63 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
 .table thead:last-child tr:not(:last-child) th,
 .table thead:last-child tr:not(:last-child) td {
@@ -1317,9 +1321,9 @@ textarea.error:focus {
 
 /* line 34 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/base/tables.styl */
 
-/* line 106 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 103 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
-/* line 107 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/table.styl */
+/* line 104 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/table.styl */
 
 .table--striped tbody tr:nth-of-type(odd) {
   background-color: #f5f5dc;
@@ -1327,9 +1331,9 @@ textarea.error:focus {
 
 /* line 36 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/base/tables.styl */
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/index.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/index.styl */
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/index.styl */
+/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/index.styl */
 
 /* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/buttons.styl */
 
@@ -1367,7 +1371,7 @@ textarea.error:focus {
   text-decoration: none;
 }
 
-/* line 36 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/button.styl */
+/* line 36 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/button.styl */
 
 .btn::-moz-focus-inner {
   /* Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding. */
@@ -1479,7 +1483,7 @@ textarea.error:focus {
   clear: both;
 }
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/island.styl */
+/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/island.styl */
 
 .island > :last-child {
   margin-bottom: 0;
@@ -1523,34 +1527,34 @@ textarea.error:focus {
   clear: both;
 }
 
-/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
 .media__img {
   float: left;
   margin-right: 5px;
 }
 
-/* line 8 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 8 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
 .media__img--rev {
   float: right;
   margin-left: 5px;
 }
 
-/* line 11 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 11 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
 .media__img,
 .media__img--rev {
   display: block;
 }
 
-/* line 14 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 14 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
 .media__body {
   overflow: hidden;
 }
 
-/* line 16 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/media.styl */
+/* line 16 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/media.styl */
 
 .media__body,
 .media__body > :last-child {
@@ -1573,7 +1577,7 @@ textarea.error:focus {
 
 /* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
-/* line 3 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 5 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist {
   list-style: none;
@@ -1589,9 +1593,9 @@ textarea.error:focus {
   clear: both;
 }
 
-/* line 24 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 24 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
-/* line 25 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 25 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist > li,
 .navlist > li > a {
@@ -1600,27 +1604,27 @@ textarea.error:focus {
   zoom: 1;
 }
 
-/* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 8 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
-/* line 44 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 44 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--stacked > li {
   display: list-item;
 }
 
-/* line 46 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 46 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--stacked > li > a {
   display: block;
 }
 
-/* line 9 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 11 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist--banner {
   text-align: center;
 }
 
-/* line 12 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 14 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist--block {
   line-height: 1;
@@ -1630,85 +1634,85 @@ textarea.error:focus {
   white-space: nowrap;
 }
 
-/* line 82 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 82 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--block > li {
   letter-spacing: normal;
   word-spacing: normal;
 }
 
-/* line 85 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 85 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--block > li > a {
   padding: 10px;
 }
 
-/* line 15 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 17 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist--fit {
   display: table;
   width: 100%;
 }
 
-/* line 105 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 105 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--fit > li {
   display: table-cell;
 }
 
-/* line 107 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 107 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--fit > li > a {
   display: block;
 }
 
-/* line 18 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 20 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
-/* line 118 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 118 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
-/* line 119 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 119 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--keywords > li:after {
   content: "\002C" "\00A0";
 }
 
-/* line 121 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 121 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .navlist--keywords > li:last-child:after {
   display: none;
 }
 
-/* line 21 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 23 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
-/* line 155 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 155 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .breadcrumb > li + li:before {
   content: "\00BB" "\00A0";
 }
 
-/* line 157 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 157 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .breadcrumb > li + li[data-breadcrumb]:before {
   /* Assign a delimiter on the fly through a data attribute */
   content: attr(data-breadcrumb) "\00A0";
 }
 
-/* line 160 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 160 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .breadcrumb__root {
   /* Denote the root of the tree */
   font-weight: bold;
 }
 
-/* line 24 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 26 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
-/* line 176 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/components/navlist.styl */
+/* line 176 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/navlist.styl */
 
 .breadcrumb--path > li + li:before {
   content: "\002F" "\00A0";
 }
 
-/* line 27 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 29 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist--no-whitespace {
   letter-spacing: -0.31em;
@@ -1719,22 +1723,158 @@ textarea.error:focus {
   /*word-spacing normal*/
 }
 
-/* line 35 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 37 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
-/* line 36 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 38 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist-demo .island {
   border: 1px solid #000;
   background-color: #008000;
 }
 
-/* line 39 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 41 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
 
 .navlist-demo .island .navlist {
   background-color: #f00;
 }
 
-/* line 41 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+/* line 51 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/navlist.styl */
+
+/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+/* line 25 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout__content {
+  border: 1px solid #000;
+}
+
+/* line 28 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout__content--fade {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease, left 0s 0.5s, right 0s 0.5s, top 0s 0.5s, bottom 0s 0.5s;
+  transition: opacity 0.5s ease, left 0s 0.5s, right 0s 0.5s, top 0s 0.5s, bottom 0s 0.5s;
+}
+
+/* line 38 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout__content--below {
+  top: -99999px;
+  left: -99999px;
+}
+
+/* line 38 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout__content--above {
+  bottom: 99998px;
+  left: -99999px;
+}
+
+/* line 38 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout__content--left {
+  top: -99999px;
+  left: -99999px;
+  right: 99998px;
+}
+
+/* line 38 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout__content--right {
+  top: -99999px;
+  left: -99999px;
+  right: 99998px;
+}
+
+/* line 41 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout {
+  /* Content selector */
+  position: relative;
+  /* This isn't necessary right now, not sure why it was in the Inuit style */
+  /*overflow hidden*/
+  /* Basic styling of the content */
+}
+
+/* line 52 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/flyout.styl */
+
+.flyout__content {
+  /* Position the flyout off-screen. As opposed to `display:none;`, `visibility:hidden;`, and `height:0;width:0;`,
+    this makes the content accessible to screen readers. */
+  position: absolute;
+  left: -99999px;
+}
+
+/* line 56 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/flyout.styl */
+
+/* line 60 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/flyout.styl */
+
+.flyout:hover > .flyout__content {
+  /* Set the left value to 0. This may or may not be a useful position, but it is an absolute value, which makes
+      it animatable. */
+  left: 0;
+}
+
+/* line 66 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/generic/lib/objects/flyout.styl */
+
+/* line 44 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout:hover > .flyout__content--fade {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+/* line 49 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout:hover > .flyout__content--below {
+  top: 100%;
+  left: 0;
+}
+
+/* line 49 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout:hover > .flyout__content--above {
+  bottom: 100%;
+  left: 0;
+}
+
+/* line 49 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout:hover > .flyout__content--left {
+  top: 0;
+  left: -50%;
+  right: 100%;
+}
+
+/* line 49 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout:hover > .flyout__content--right {
+  top: 0;
+  left: 100%;
+  right: -50%;
+}
+
+/* line 52 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+/* line 53 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout-demo .island {
+  border: 1px solid #000;
+  background-color: #008000;
+}
+
+/* line 56 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
+
+.flyout-demo .island .flyout {
+  background-color: #f00;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 1 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/components/flyout.styl */
 
 /* line 6 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/layout/index.styl */
 
@@ -3412,56 +3552,64 @@ main:after {
 
 /* line 13 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*$ident-alignments = left right center*/
-
 /* line 14 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*$string-alignments = 'left' 'right' 'center'*/
-
-/* line 15 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
-
-/*$lists = $ident-alignments $string-alignments*/
+/*p(length($block-or-hash))*/
 
 /* line 16 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*for $list in $lists*/
+/*$block =*/
 
 /* line 17 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*p('$list: ' + $list)*/
+/*a 1*/
 
 /* line 18 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*for $item in $list*/
+/*b 2*/
 
 /* line 19 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*p('$item: ' + $item)*/
+/*$hash = {*/
 
 /* line 20 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*for $l in $lists*/
+/*a: 1,*/
 
 /* line 21 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*p('$l: ' + $l)*/
+/*b: 2*/
 
 /* line 22 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*$in-list = $item in $l ? 'true' : 'false'*/
-
 /* line 23 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*p($item + ' in ' + $l + ': ' + $in-list)*/
+/*p('foo():')*/
+
+/* line 24 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
+
+/*foo()*/
 
 /* line 25 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*@import 'scope-test'*/
+/*p('foo($block):')*/
+
+/* line 26 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
+
+/*foo($block)*/
 
 /* line 27 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*p(scope-test)*/
+/*p('foo($hash):')*/
 
 /* line 28 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
 
-/*scope-test.fn1(scope-test)*/
+/*foo($hash)*/
+
+/* line 30 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
+
+/*$null = null*/
+
+/* line 31 : /Users/Morgan/Desktop/development/css/stylus/stylus-playground/src/styles/style.styl */
+
+/*p($null is null)*/

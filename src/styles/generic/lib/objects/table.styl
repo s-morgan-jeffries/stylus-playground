@@ -53,9 +53,6 @@ extend-table-cell-borders($border-width=1px, $border-style=solid, $border-color=
 /* Row borders */
 /* Due to the use of the :not selector, this is only supported in IE9 and above */
 extend-table-section-row-borders($section, $row-border)
-  p($section)
-  p(typeof($section))
-  p(unquote($section))
   {$section}
     &:not(:last-child)
       th

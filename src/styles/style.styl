@@ -10,19 +10,22 @@
   /*margin 0 auto*/
   /*padding-top 50px*/
 
-/*$ident-alignments = left right center*/
-/*$string-alignments = 'left' 'right' 'center'*/
-/*$lists = $ident-alignments $string-alignments*/
-/*for $list in $lists*/
-  /*p('$list: ' + $list)*/
-  /*for $item in $list*/
-    /*p('$item: ' + $item)*/
-    /*for $l in $lists*/
-      /*p('$l: ' + $l)*/
-      /*$in-list = $item in $l ? 'true' : 'false'*/
-      /*p($item + ' in ' + $l + ': ' + $in-list)*/
+/*foo($block-or-hash={})*/
+  /*p(length($block-or-hash))*/
 
-/*@import 'scope-test'*/
+/*$block =*/
+  /*a 1*/
+  /*b 2*/
+/*$hash = {*/
+  /*a: 1,*/
+  /*b: 2*/
+/*}*/
+/*p('foo():')*/
+/*foo()*/
+/*p('foo($block):')*/
+/*foo($block)*/
+/*p('foo($hash):')*/
+/*foo($hash)*/
 
-/*p(scope-test)*/
-/*scope-test.fn1(scope-test)*/
+/*$null = null*/
+/*p($null is null)*/

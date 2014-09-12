@@ -152,10 +152,10 @@ extend-navlist-keywords()
  *
  */
 
-extend-navlist-breadcrumb()
+extend-navlist-breadcrumb($separator="\00BB")
   $s = selector()
   > li + li:before
-    content "\00BB" "\00A0"
+    content $separator "\00A0"
   > li + li[data-breadcrumb]:before
     /* Assign a delimiter on the fly through a data attribute */
     content attr(data-breadcrumb) "\00A0"

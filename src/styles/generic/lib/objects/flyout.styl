@@ -1,0 +1,120 @@
+/*------------------------------------*\
+    $FLYOUT
+\*------------------------------------*/
+/**
+ * Flyouts are pieces of content that fly out of a parent when said parent is
+ * hovered. They typically appear bottom-left of the parent.
+ *
+   <div class=flyout>
+       Foo
+       <div class=flyout__content>
+           <h1>Lorem</h1>
+           <p>Ipsum</p>
+       </div>
+   </div>
+ *
+ * Extend these objects in your theme stylesheet.
+ *
+ * Demo: jsfiddle.net/inuitcss/B52HG
+ *
+ */
+
+$flyout-offscreen-positions = {
+  left: -99999px,
+  right: 99998px,
+  top: -99999px,
+  bottom: 99998px
+}
+
+/* This allows you to generate an appropriate offscreen position for any flyout__content based on its onscreen position.
+The trick is that in order for transitions to work (see the bottom of the page), you can't have any position values go
+from an auto to an absolute value or vice-versa. (e.g. If you set the top value for flyout__content when it's onscreen,
+you have to set it to an absolute value when it's offscreen; otherwise transitions won't work.) */
+-flyout-offscreen-position($hover-position)
+  $offscreen-position = {}
+  for $pos, $val in $hover-position
+    $offscreen-position[$pos] = $flyout-offscreen-positions[$pos]
+  /* This always has to be included */
+  $offscreen-position.left = $flyout-offscreen-positions.left
+  return $offscreen-position
+
+flyoutize($content-selector=null)
+  /* Content selector */
+  if $content-selector is null
+    $content-selector = selector() + __content
+
+  /* Basic styling for the flyout parent */
+  /* Give the parent relative positioning so the flyout can be positioned relative to it */
+  position relative
+  /* This isn't necessary right now, not sure why it was in the Inuit style */
+  /*overflow hidden*/
+  /* Basic styling of the content */
+  /{$content-selector}
+    /* Position the flyout off-screen. As opposed to `display:none;`, `visibility:hidden;`, and `height:0;width:0;`,
+    this makes the content accessible to screen readers. */
+    position absolute
+    left $flyout-offscreen-positions['left']
+  &:hover
+    /* Again, this isn't necessary right now, since the overflow was never set to hidden */
+    /*overflow visible*/
+    /* Bring the flyouts into view when you hover their parents. */
+    > {$content-selector}
+      /* Set the left value to 0. This may or may not be a useful position, but it is an absolute value, which makes
+      it animatable. */
+      left 0
+
+extend-flyout-hover-behavior()
+  &:hover
+    {block}
+
+/************************/
+/* HOW TO SET POSITIONS */
+/************************/
+/* Here's an example of how to make subclasses of the flyout__content with specific positions (in this example, the
+keys of $flyout-positions will be the generated classnames):
+$flyout-positions = {}
+$flyout-positions['below'] = {
+  top: 100%,
+  left: 0
+}
+$flyout-positions['above'] = {
+  bottom: 100%,
+  left: 0
+}
+$flyout-positions['left'] = {
+  top: 0,
+  left: -50%,
+  right: 100%
+}
+$flyout-positions['right'] = {
+  top: 0,
+  left: 100%,
+  right: -50%
+}
+
+for key, val in $flyout-positions
+  $offscreen-pos = -flyout-offscreen-position(val)
+  {key}
+    {$offscreen-pos}
+
+for key, val in $flyout-positions
+  .flyout:hover > {key}
+    {val}
+*/
+
+/**************************/
+/* HOW TO ADD TRANSITIONS */
+/**************************/
+/* Here's how to add a transition for a flyout (for opacity in this case):
+$transition-duration = 1s
+.flyout__content--fade
+  opacity 0
+  transition: opacity $transition-duration ease,
+    left 0s $transition-duration,
+    right 0s $transition-duration,
+    top 0s $transition-duration,
+    bottom 0s $transition-duration
+.flyout:hover > .flyout__content--fade
+  opacity 1
+  transition opacity $transition-duration ease
+*/

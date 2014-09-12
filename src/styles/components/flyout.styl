@@ -1,0 +1,59 @@
+$flyout-content-selector = '.flyout__content'
+
+$flyout-positions = {}
+$flyout-positions['below'] = {
+  top: 100%,
+  left: 0
+}
+$flyout-positions['above'] = {
+  bottom: 100%,
+  left: 0
+}
+$flyout-positions['left'] = {
+  top: 0,
+  left: -50%,
+  right: 100%
+}
+$flyout-positions['right'] = {
+  top: 0,
+  left: 100%,
+  right: -50%
+}
+
+$transition-duration = 0.5s
+
+{$flyout-content-selector}
+  border 1px solid black
+
+{$flyout-content-selector}--fade
+  opacity 0
+  transition: opacity $transition-duration ease,
+    left 0s $transition-duration,
+    right 0s $transition-duration,
+    top 0s $transition-duration,
+    bottom 0s $transition-duration
+
+for key, val in $flyout-positions
+  $offscreen-pos = -flyout-offscreen-position(val)
+  {$flyout-content-selector}--{key}
+    {$offscreen-pos}
+
+.flyout
+  flyoutize($flyout-content-selector)
+  +extend-flyout-hover-behavior()
+    > {$flyout-content-selector}--fade
+      opacity 1
+      transition opacity $transition-duration ease
+      /*{$below-hover-position}*/
+    for key, val in $flyout-positions
+      > {$flyout-content-selector}--{key}
+        {val}
+
+.flyout-demo
+  .island
+    border 1px solid #000000
+    background-color #008000
+    .flyout
+      background-color #ff0000
+      width 50%
+      margin 0 auto

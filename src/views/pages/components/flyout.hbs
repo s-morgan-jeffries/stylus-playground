@@ -1,0 +1,62 @@
+---
+layout: standard_layout.hbs
+---
+{{!--<div class="opacity-transition-test">--}}
+    {{!--<div class="opacity-transition-test__content">I'm the content.</div>--}}
+{{!--</div>--}}
+<div class="flyout-demo">
+    <div class="island">
+        <p>Basic flyout</p>
+        <div class="flyout">
+            <div class="flyout__content">
+                This is the flyout content.
+            </div>
+            This is the flyout parent. When it's hovered, things happen.
+        </div>
+    </div>
+    <div class="island">
+        <p>Above flyout</p>
+        <div class="flyout">
+            This is the flyout parent. When it's hovered, things happen.
+            <div class="flyout__content flyout__content--above">
+                This is the flyout content.
+            </div>
+        </div>
+    </div>
+    <div class="island">
+        <p>Below flyout</p>
+        <div class="flyout">
+            This is the flyout parent. When it's hovered, things happen.
+            <div class="flyout__content flyout__content--below">
+                This is the flyout content.
+            </div>
+        </div>
+    </div>
+    <div class="island">
+        <p>Left flyout</p>
+        <div class="flyout">
+            This is the flyout parent. When it's hovered, things happen.
+            <div class="flyout__content flyout__content--left">
+                This is the flyout content.
+            </div>
+        </div>
+    </div>
+    <div class="island">
+        <p>Right flyout</p>
+        <div class="flyout">
+            This is the flyout parent. When it's hovered, things happen.
+            <div class="flyout__content flyout__content--right">
+                This is the flyout content.
+            </div>
+        </div>
+    </div>
+    <div class="island">
+        <p>Below flyout w/fade</p>
+        <div class="flyout">
+            This is the flyout parent. When it's hovered, things happen.
+            <div class="flyout__content flyout__content--below flyout__content--fade">
+                This is the flyout content.
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,6 @@
 $navlist-block-padding = 10px
+$breadcrumb-separator = $unicode-chars['double-arrow']
+$breadcrumb-path-separator = $unicode-chars['forward-slash']
 
 .navlist
   navlistize()
@@ -19,10 +21,10 @@ $navlist-block-padding = 10px
   extend-navlist-keywords()
 
 .breadcrumb
-  extend-navlist-breadcrumb()
+  extend-navlist-breadcrumb($breadcrumb-separator)
 
 .breadcrumb--path
-  extend-navlist-breadcrumb-path()
+  extend-navlist-breadcrumb-path($breadcrumb-path-separator)
 
 .navlist--no-whitespace
   letter-spacing -0.31em
@@ -38,3 +40,11 @@ $navlist-block-padding = 10px
     background-color #008000
     .navlist
       background-color #ff0000
+
+/*$after-content-char = 'double-arrow'*/
+/*$after-content = $unicode-chars[$after-content-char]*/
+/*$after-content = ""*/
+/*.after-test*/
+  /*&:after*/
+    /*content $after-content*/
+    /*border 1px solid #000000*/
