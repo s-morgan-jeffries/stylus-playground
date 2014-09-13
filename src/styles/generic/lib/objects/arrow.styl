@@ -1,0 +1,228 @@
+/*------------------------------------*\
+    $ARROWS
+\*------------------------------------*/
+/**
+ * It is a common design treatment to give an element a triangular points-out
+ * arrow, we typically build these with CSS. These following classes allow us to
+ * generate these arbitrarily with a mixin, `@arrow()`.
+ */
+
+/*$half-spacing-unit = 12px*/
+/*$arrow-height ?= $half-spacing-unit*/
+/*$border-width ?= 1px*/
+
+/* Define individual edges so we can combine what we need, when we need */
+
+
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
+ */
+arrowize($arrow-edge, $arrow-location, $arrow-color, $arrow-height=12px, $border-width=1px, $border-color=null)
+
+  /* Internal functions */
+  -get-arrow-size($arrow-height, $border-width)
+    return $arrow-height - $border-width
+
+  -get-arrow-border($arrow-height, $border-width)
+    return $arrow-height
+
+  /* Internal mixins */
+  /* Forms the basis for any/all CSS arrows */
+  base-arrow($arrow-object-size, $border-object-size)
+    +cache('base')
+      position relative
+      &:before
+      &:after
+        content ""
+        position absolute
+        border-collapse separate
+
+    $cache-name = '$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+        border $border-object-size solid transparent
+
+    $cache-name = '$arrow-object-size:' + $arrow-object-size
+    +cache($cache-name)
+      &:after
+        border $arrow-object-size solid transparent
+
+  /* Cacheable mixins for border-colors */
+  border-edge-color($edge, $color)
+    $cache-name = $edge + ':' + ('' + $color)
+    p($cache-name)
+    +cache($cache-name)
+      border-{$edge}-color $color
+
+  /* Mixins for arrows on each edge of the styled object */
+  top-edge-arrow($arrow-color, $border-color)
+    &:before
+      border-edge-color(bottom, $border-color)
+    &:after
+      border-edge-color(bottom, $arrow-color)
+    +cache()
+      &:before
+      &:after
+        bottom 100%
+
+  right-edge-arrow($arrow-color, $border-color)
+    &:before
+      border-edge-color(left, $border-color)
+    &:after
+      border-edge-color(left, $arrow-color)
+    +cache()
+      &:before
+      &:after
+        left 100%
+
+  bottom-edge-arrow($arrow-color, $border-color)
+    &:before
+      border-edge-color(top, $border-color)
+    &:after
+      border-edge-color(top, $arrow-color)
+    +cache()
+      &:before
+      &:after
+        top 100%
+
+  left-edge-arrow($arrow-color, $border-color)
+    &:before
+      border-edge-color(right, $border-color)
+    &:after
+      border-edge-color(right, $arrow-color)
+    +cache()
+      &:before
+      &:after
+        right 100%
+
+  /* Mixins for arrows on each edge of the styled object */
+  high-arrow($arrow-object-size, $border-object-size)
+    $cache-name = '$arrow-object-size:' + $arrow-object-size + ',$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+        top $arrow-object-size
+      &:after
+        top $border-object-size
+
+  vert-centered-arrow($arrow-object-size, $border-object-size)
+    $cache-name = '$arrow-object-size:' + $arrow-object-size + ',$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+      &:after
+        top 50%
+        margin-top -($border-object-size)
+      &:after
+        margin-top -($arrow-object-size)
+
+  low-arrow($arrow-object-size, $border-object-size)
+    $cache-name = '$arrow-object-size:' + $arrow-object-size + ',$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+        bottom $arrow-object-size
+      &:after
+        bottom $border-object-size
+
+  left-arrow($arrow-object-size, $border-object-size)
+    $cache-name = '$arrow-object-size:' + $arrow-object-size + ',$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+        left $arrow-object-size
+      &:after
+        left $border-object-size
+
+  horiz-centered-arrow($arrow-object-size, $border-object-size)
+    $cache-name = '$arrow-object-size:' + $arrow-object-size + ',$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+      &:after
+        left 50%
+        margin-left -($border-object-size)
+      &:after
+        margin-left -($arrow-object-size)
+
+  right-arrow($arrow-object-size, $border-object-size)
+    $cache-name = '$arrow-object-size:' + $arrow-object-size + ',$border-object-size:' + $border-object-size
+    +cache($cache-name)
+      &:before
+        right $arrow-object-size
+      &:after
+        right $border-object-size
+
+  /* Parse inputs */
+  if $border-color is null
+    $border-color = $arrow-color
+
+  /* Calculate the size of the arrow and border objects */
+  $arrow-object-size = -get-arrow-size($arrow-height, $border-width)
+  $border-object-size = -get-arrow-border($arrow-height, $border-width)
+
+  /* Call the cacheable base-arrow mixin */
+  base-arrow($arrow-object-size, $border-object-size)
+
+  if $arrow-edge == top
+    top-edge-arrow($arrow-color, $border-color)
+    if $arrow-location == left
+      left-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == 'center'
+      horiz-centered-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == right
+      right-arrow($arrow-object-size, $border-object-size)
+
+  else if $arrow-edge == right
+    right-edge-arrow($arrow-color, $border-color)
+    if $arrow-location == top
+      high-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == 'center'
+      vert-centered-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == bottom
+      low-arrow($arrow-object-size, $border-object-size)
+
+  else if $arrow-edge == bottom
+    bottom-edge-arrow($arrow-color, $border-color)
+    if $arrow-location == left
+      left-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == 'center'
+      horiz-centered-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == right
+      right-arrow($arrow-object-size, $border-object-size)
+
+  else if $arrow-edge == left
+    left-edge-arrow($arrow-color, $border-color)
+    if $arrow-location == top
+      high-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == 'center'
+      vert-centered-arrow($arrow-object-size, $border-object-size)
+    else if $arrow-location == bottom
+      low-arrow($arrow-object-size, $border-object-size)

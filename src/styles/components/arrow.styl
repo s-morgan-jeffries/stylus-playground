@@ -1,0 +1,166 @@
+$arrow-color = blue
+$arrow-border-color = black
+
+$arrow-edges = {
+  top: 'left' 'center' 'right',
+  right: 'top' 'center' 'bottom',
+  bottom: 'left' 'center' 'right',
+  left: 'top' 'center' 'bottom'
+}
+
+for $edge, $arrow-locations in $arrow-edges
+  for $location in $arrow-locations
+    .arrow--{$edge}-{$location}
+      arrowize($edge, $location, $arrow-color, $border-color: $arrow-border-color)
+
+.arrow
+  display inline-block
+  background-color $arrow-color
+  height 200px
+  width 200px
+  text-align center
+  color #ffffff
+  margin 0 0.9375em 0.9375em 0
+  padding-top 2.5em
+  border 1px solid #000000
+
+.arrow-demo
+  padding-top 50px
+
+
+use-cache($bg-color)
+  $bg-color = rgba($bg-color)
+  +cache('' + $bg-color)
+    background-color $bg-color
+
+use-cache2($text-color)
+  $text-color = rgba($text-color)
+  +cache('' + $text-color)
+    color $text-color
+
+
+nested-cache3($color)
+  use-cache3($col)
+    $col = rgba($col)
+    +cache('' + $col)
+      border 1px solid $col
+  use-cache3($color)
+
+anonymous-cache()
+  +cache('1')
+    width 10px
+  +cache('2')
+    height 10px
+
+.cache-test1
+  use-cache(blue)
+  use-cache2(white)
+  nested-cache3(black)
+  anonymous-cache()
+
+.cache-test2
+  use-cache(blue)
+  use-cache2(white)
+  nested-cache3(black)
+  anonymous-cache()
+
+.cache-test3
+  use-cache(red)
+  use-cache2(blue)
+  nested-cache3(yellow)
+  anonymous-cache()
+
+
+/*.arrow--top-left*/
+  /*@extend $arrow--top*/
+  /*&:before*/
+    /*border-bottom-color:$arrow-border-color!important;*/
+  /*&:after*/
+    /*border-bottom-color:$arrow-color!important;*/
+  /*@extend $arrow--left*/
+/*.arrow*/
+  /*arrowize()*/
+
+/*.arrow--top*/
+  /*extend-arrow-top()*/
+  /*&:before*/
+    /*border-bottom-color $arrow-border-color*/
+  /*&:after*/
+    /*border-bottom-color $arrow-color*/
+
+/*.arrow--bottom*/
+  /*extend-arrow-bottom()*/
+  /*&:before*/
+    /*border-top-color $arrow-border-color*/
+  /*&:after*/
+    /*border-top-color $arrow-color*/
+
+/*.arrow--near*/
+  /*extend-arrow-near()*/
+  /*&:before*/
+    /*border-right-color $arrow-border-color*/
+  /*&:after*/
+    /*border-right-color $arrow-color*/
+
+/*.arrow--far*/
+  /*extend-arrow-far()*/
+  /*&:before*/
+    /*border-left-color $arrow-border-color*/
+  /*&:after*/
+    /*border-left-color $arrow-color*/
+
+/*.arrow--upper*/
+  /*extend-arrow-upper()*/
+
+/*.arrow--middle*/
+  /*extend-arrow-middle()*/
+
+/*.arrow--lower*/
+  /*extend-arrow-lower()*/
+
+/*.arrow--left*/
+  /*extend-arrow-left()*/
+
+/*.arrow--center*/
+  /*extend-arrow-center()*/
+
+/*.arrow--right*/
+  /*extend-arrow-right()*/
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid black;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f00;
+}
+
+/* The border  */
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+
+  border-left: 60px solid green;
+  /*border-right: 60px solid transparent;*/
+  /*transform rotate(30deg)*/
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right:10px solid blue;
+}

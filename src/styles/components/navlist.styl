@@ -1,5 +1,5 @@
 $navlist-block-padding = 10px
-$breadcrumb-separator = $unicode-chars['double-arrow']
+$breadcrumb-separator = $unicode-chars['double-arrow-right']
 $breadcrumb-path-separator = $unicode-chars['forward-slash']
 
 .navlist
@@ -24,7 +24,10 @@ $breadcrumb-path-separator = $unicode-chars['forward-slash']
   extend-navlist-breadcrumb($breadcrumb-separator)
 
 .breadcrumb--path
-  extend-navlist-breadcrumb-path($breadcrumb-path-separator)
+  extend-navlist-breadcrumb($breadcrumb-path-separator)
+
+.pagination
+  extend-navlist-pagination(15px)
 
 .navlist--no-whitespace
   letter-spacing -0.31em

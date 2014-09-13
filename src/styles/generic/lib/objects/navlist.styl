@@ -174,6 +174,66 @@ extend-navlist-breadcrumb($separator="\00BB")
    </ol>
  *
  */
-extend-navlist-breadcrumb-path()
-  > li + li:before
-    content "\002F" "\00A0"
+/*extend-navlist-breadcrumb-path()*/
+  /*> li + li:before*/
+    /*content "\002F" "\00A0"*/
+
+/*------------------------------------*\
+$PAGINATION
+\*------------------------------------*/
+/**
+ * Basic pagination object, extends `.nav`.
+ * Requires some funky commenting to collapse any white-space caused by the
+ * `display:inline-block;` rules.
+ *
+   <ol class="nav  pagination">
+       <li class=pagination__first>First</li>
+       <li class=pagination__prev>Previous</li>
+       <li><a href=/page/1>1</a></li>
+       <li><a href=/page/2>2</a></li>
+       <li class=current><a href=/page/3>3</a></li>
+       <li><a href=/page/4>4</a></li>
+       <li><a href=/page/5>5</a></li>
+       <li class=pagination__next><a href=/page/next>Next</a></li>
+       <li class=pagination__last><a href=/page/last>Last</a></li>
+   </ol>
+ *
+ * Demo: jsfiddle.net/inuitcss/9Y6PU
+ *
+ */
+
+extend-navlist-pagination($spacing)
+  $base-selector = selector()
+  $first-selector = $base-selector + '__first'
+  $prev-selector = $base-selector + '__prev'
+  $next-selector = $base-selector + '__next'
+  $last-selector = $base-selector + '__last'
+  $double-arrow-left = $unicode-chars['left-pointing-double-angle-quotation-mark']
+  $double-arrow-right = $unicode-chars['right-pointing-double-angle-quotation-mark']
+  $single-arrow-left = $unicode-chars['single-left-pointing-angle-quotation-mark']
+  $single-arrow-right = $unicode-chars['single-right-pointing-angle-quotation-mark']
+  $space = $unicode-chars['space']
+
+  text-align center
+  /* Remove whitespace caused by `inline-block` */
+  letter-spacing -0.31em
+  word-spacing -0.43em
+  > li
+    padding $spacing
+    letter-spacing normal
+    word-spacing normal
+    > a
+      padding $spacing
+      margin -($spacing)
+  /{$first-selector}
+    a:before
+      content $double-arrow-left $space
+  /{$prev-selector}
+    a:before
+      content $single-arrow-left $space
+  /{$next-selector}
+    a:after
+      content $space $single-arrow-right
+  /{$last-selector}
+    a:after
+      content $space $double-arrow-right
